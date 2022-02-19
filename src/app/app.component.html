@@ -11,7 +11,7 @@ mi componente si no existe genera un ERROR
 
 <button (click)="addBibleBook()">Add</button>
 <button (click)="empty()">Empty</button>
-
+<h2>{{ bibleBookName }}</h2>
 <ul>
   <li *ngIf="bibleBooks.length === 0">
     No hay Libros
@@ -23,7 +23,14 @@ mi componente si no existe genera un ERROR
 </ul>
 
 
+<div *ngIf=" bibleBookName === 'Luke'"> 
+   ngIf => Mostrar Luke
+</div>
 
-<div *ngIf=" bibleBookName === b"> 
-   Mostrar div
+<div *ngIf=" bibleBookName === '1Kings'"> 
+  ngIf => Mostrar 1Kings
+</div>
+
+<div *ngIf=" bibleBookName === '2Kings'"> 
+  ngIf => Mostrar 2Kings
 </div>

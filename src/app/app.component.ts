@@ -8,8 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Hi first class';
   name = 'Daniel';
-  a = 1;
-  b = 'Luke'; 
+  
 
   
   bibleBooks = ['Exodus', 'Genesis', 'Revelations', 'Jhon']; 
