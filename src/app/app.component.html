@@ -1,0 +1,29 @@
+<h1>Hello World {{ title }}</h1>
+<p>{{ 1 + '1'}}</p>
+
+<!-- generamos un evento llamado click, existen muchos eventos
+este evento va a ejecutar nuestro metodo que debe existir en
+mi componente si no existe genera un ERROR
+ -->
+<button (click)="changeTitle()">New Title</button>
+
+<input type="text" [(ngModel)]="bibleBookName" (keydown.enter)="addBibleBook()"> {{bibleBookName}}
+
+<button (click)="addBibleBook()">Add</button>
+<button (click)="empty()">Empty</button>
+
+<ul>
+  <li *ngIf="bibleBooks.length === 0">
+    No hay Libros
+  </li>
+
+  <li *ngFor="let books of bibleBooks">
+        {{ books }}
+  </li>
+</ul>
+
+
+
+<div *ngIf=" bibleBookName === b"> 
+   Mostrar div
+</div>
