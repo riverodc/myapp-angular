@@ -23,7 +23,7 @@ mi componente si no existe genera un ERROR
 </ul>
 
 
-<div *ngIf=" bibleBookName === 'Luke'"> 
+<!-- <div *ngIf=" bibleBookName === 'Luke'"> 
    ngIf => Mostrar Luke
 </div>
 
@@ -33,4 +33,11 @@ mi componente si no existe genera un ERROR
 
 <div *ngIf=" bibleBookName === '2Kings'"> 
   ngIf => Mostrar 2Kings
+</div> -->
+
+<div [ngSwitch]="bibleBookName">
+<p *ngSwitchCase=" 'Luke' ">Is Luke</p>
+<p *ngSwitchCase=" '1Kings' ">Is 1Kings</p>
+<p *ngSwitchCase=" 'Salms' ">Is Salms</p>
+<p *ngSwitchDefault>No make Mach</p>
 </div>
