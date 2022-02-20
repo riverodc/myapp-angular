@@ -11,7 +11,7 @@ export class AppComponent {
   
 
   
-  bibleBooks = ['Exodus', 'Genesis', 'Revelations', 'Jhon']; 
+  bibleBooks = ['Exodus', 'Genesis']; 
   bibleBookName = '';
 /* Nuevo metodo para agregar un elemento a mi lista */
   addBibleBook() {
@@ -29,6 +29,18 @@ export class AppComponent {
 
   empty() {
     this.bibleBooks =[]; 
+  }
+
+  deleteItem(index: number) {
+
+    this.bibleBooks.splice(index, 1); 
+
+  }
+
+  updateItem(index: number) {
+
+    this.bibleBooks[index] = 'se cambio'; 
+
   }
 
 

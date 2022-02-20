@@ -8,7 +8,8 @@ mi componente si no existe genera un ERROR
 <button (click)="changeTitle()">New Title</button>
 
 <input type="text" [(ngModel)]="bibleBookName" (keydown.enter)="addBibleBook()"> {{bibleBookName}}
-
+<br>
+<br>
 <button (click)="addBibleBook()">Add</button>
 <button (click)="empty()">Empty</button>
 <h2>{{ bibleBookName }}</h2>
@@ -17,8 +18,10 @@ mi componente si no existe genera un ERROR
     No hay Libros
   </li>
 
-  <li *ngFor="let books of bibleBooks">
-        {{ books }}
+  <li *ngFor="let books of bibleBooks; index as i">
+        {{ books }} {{ i + 1}}
+        <button (click)="deleteItem(i)">delete</button>
+        <button (click)="updateItem(i)">Update</button>
   </li>
 </ul>
 
