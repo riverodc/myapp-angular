@@ -44,3 +44,18 @@ mi componente si no existe genera un ERROR
 <p *ngSwitchCase=" 'Salms' ">Is Salms</p>
 <p *ngSwitchDefault>No make Mach</p>
 </div>
+
+
+<!-- Recorrido de Objeto -->
+
+<ul>
+  <li *ngFor="let user of users">
+
+    Nombre: {{ user.name }}
+    Edad: {{ user.age }}
+    Soltero: {{ user.isSingle ? 'Si' : 'No'}}
+    image: {{ user.avatar}}
+    <img [src]="user.avatar" alt="">
+
+  </li>
+</ul>

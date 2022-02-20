@@ -1,5 +1,13 @@
 import { Component } from '@angular/core';
 
+/* interface sirve para definir globalmente el tipo de dato de un objeto */
+interface User {
+  name: string; 
+  age: number;
+  isSingle: boolean;
+  avatar: string; 
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,8 +18,35 @@ export class AppComponent {
   name = 'Daniel';
   
 
+  /* Array Normal typo String */
+  bibleBooks: string[] = ['Exodus', 'Genesis']; 
+
+  /* Array de Objetos */
   
-  bibleBooks = ['Exodus', 'Genesis']; 
+  users: User[] = [
+    {
+      name: 'Daniel',
+      age: 38,
+      isSingle: false,
+      avatar: 'assets/images/daniel.jpg',
+    },
+
+    {
+      name: 'Ana',
+      age: 26,
+      isSingle: false,
+      avatar: 'assets/images/ana.jpg',
+    },
+
+    {
+      name: 'Sofia',
+      age: 5,
+      isSingle: true,
+      avatar: 'assets/images/sofia.jpg',
+    }
+
+  ];
+
   bibleBookName = '';
 /* Nuevo metodo para agregar un elemento a mi lista */
   addBibleBook() {
