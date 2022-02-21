@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { Product } from './models/product.model';
+
 /* interface sirve para definir globalmente el tipo de dato de un objeto */
 interface User {
   name: string; 
@@ -48,6 +50,38 @@ export class AppComponent {
   ];
 
   bibleBookName = '';
+
+  /* Construimos un array de productos */
+  products: Product[] = [
+    {
+      title: 'Lenovo Legion',
+      price: 4000,
+      text: 'Gamer Comnputer',
+      image: 'assets/images/daniel.jpg',
+      
+    },
+    {
+      title: 'Lenovo ThinkPad',
+      price: 5000,
+      text:'Bussines Computer',
+      image: 'assets/images/daniel.jpg',
+      
+    },
+    {
+      title: 'Asus Rock',
+      price: 4500,
+      text:'Gamer Computer',
+      image: 'assets/images/daniel.jpg',
+    },
+
+
+  ];
+
+
+
+
+
+
 /* Nuevo metodo para agregar un elemento a mi lista */
   addBibleBook() {
     this.bibleBooks.push(this.bibleBookName);

@@ -53,9 +53,11 @@ mi componente si no existe genera un ERROR
 
     Nombre: {{ user.name }}
     Edad: {{ user.age }}
-    Soltero: {{ user.isSingle ? 'Si' : 'No'}}
+    Soltero: {{ user.isSingle ? 'Si' : 'No'}} <!-- Condicional -->
     image: {{ user.avatar}}
     <img [src]="user.avatar" alt="">
 
   </li>
 </ul>
+
+<app-product [product]="product" *ngFor="let product of products"></app-product>
