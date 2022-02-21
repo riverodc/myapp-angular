@@ -12,6 +12,7 @@ export class ProductListComponent implements OnInit {
    /* Construimos un array de productos */
    products: Product[] = [
     {
+      id: 1,
       title: 'Lenovo Legion',
       price: 4000,
       text: 'Gamer Comnputer',
@@ -19,6 +20,7 @@ export class ProductListComponent implements OnInit {
       
     },
     {
+      id: 2,
       title: 'Lenovo ThinkPad',
       price: 5000,
       text:'Bussines Computer',
@@ -26,6 +28,7 @@ export class ProductListComponent implements OnInit {
       
     },
     {
+      id: 3,
       title: 'Asus Rock',
       price: 4500,
       text:'Gamer Computer',
@@ -39,6 +42,11 @@ export class ProductListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+
+  onClickedProduct(id:number) {
+    console.log('clicked', id);
   }
 
 }

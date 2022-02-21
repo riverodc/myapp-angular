@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 import { Product } from './../models/product.model';
 
@@ -16,5 +16,16 @@ export class ProductComponent {
     se definirá en tiempo de ejecución y en tiempo, antes de que se utilice.*/
 
    @Input() product!: Product;
+
+   /* El EventEmitter me va a trasmitir la información hacia el componente Padre 
+   y le puedo decir el tipo de valor string, number, boolean, etc*/
+
+   @Output() clickedProduct = new EventEmitter<number>();
+
+   viewDetail() {
+       console.log('viewDetail', this.product.title); 
+       /* Vamos a decir que emita el valor del producto */
+       this.clickedProduct.emit(this.product.id);
+   }
 
 }
