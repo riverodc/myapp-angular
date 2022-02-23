@@ -1,0 +1,7 @@
+<input type="text" [(ngModel)] = "name" (keydown.enter)="addUser()">
+
+<ul>
+    <li *ngFor="let user of users">
+        {{ user.name }} {{ user.number | fibonacci }}
+    </li>
+</ul>
