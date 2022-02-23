@@ -22,6 +22,8 @@ export class ProductComponent {
 
    @Output() clickedProduct = new EventEmitter<number>();
 
+   today = new Date(); 
+
    viewDetail() {
        console.log('viewDetail', this.product.title); 
        /* Vamos a decir que emita el valor del producto */
