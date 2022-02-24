@@ -2,6 +2,7 @@
 
 <ul>
     <li *ngFor="let user of users">
-        {{ user.name }} {{ user.number | fibonacci }}
+        <p appHighlight>{{ user.name }}</p>
+         {{ user.number | fibonacci }}
     </li>
 </ul>
