@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 
-
 /* interface sirve para definir globalmente el tipo de dato de un objeto */
 interface User {
   name: string; 
@@ -8,6 +7,7 @@ interface User {
   isSingle: boolean;
   avatar: string; 
 }
+
 
 @Component({
   selector: 'app-root',

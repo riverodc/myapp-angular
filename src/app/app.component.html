@@ -1,12 +1,13 @@
 
-<h1>Hello World {{ title }}</h1>
-<p>{{ 1 + '1'}}</p>
+<!-- <h1>Hello World {{ title }}</h1>
+<p>{{ 1 + '1'}}</p> -->
 
 <!-- generamos un evento llamado click, existen muchos eventos
 este evento va a ejecutar nuestro metodo que debe existir en
 mi componente si no existe genera un ERROR
  -->
-<button (click)="changeTitle()">New Title</button>
+
+<!-- <button (click)="changeTitle()">New Title</button>
 
 <input type="text" [(ngModel)]="bibleBookName" (keydown.enter)="addBibleBook()"> {{bibleBookName}}
 <br>
@@ -24,7 +25,7 @@ mi componente si no existe genera un ERROR
         <button (click)="deleteItem(i)">delete</button>
         <button (click)="updateItem(i)">Update</button>
   </li>
-</ul>
+</ul> -->
 
 
 <!-- <div *ngIf=" bibleBookName === 'Luke'"> 
@@ -39,31 +40,32 @@ mi componente si no existe genera un ERROR
   ngIf => Mostrar 2Kings
 </div> -->
 
-<div [ngSwitch]="bibleBookName">
+<!-- <div [ngSwitch]="bibleBookName">
 <p *ngSwitchCase=" 'Luke' ">Is Luke</p>
 <p *ngSwitchCase=" '1Kings' ">Is 1Kings</p>
 <p *ngSwitchCase=" 'Salms' ">Is Salms</p>
 <p *ngSwitchDefault>No make Mach</p>
-</div>
+</div> -->
 
 
 <!-- Recorrido de Objeto -->
 
-<ul>
+<!-- <ul>
   <li *ngFor="let user of users">
 
     Nombre: {{ user.name }}
     Edad: {{ user.age }}
-    Soltero: {{ user.isSingle ? 'Si' : 'No'}} <!-- Condicional -->
+    Soltero: {{ user.isSingle ? 'Si' : 'No'}} 
     image: {{ user.avatar}}
     <img [src]="user.avatar" alt="">
 
   </li>
-</ul>
+</ul> -->
 
 
-<app-product-list></app-product-list>
+<!-- <app-product-list></app-product-list>  -->
 
 
+<!-- <app-list></app-list> -->
 
-<app-list></app-list>
+<app-users-list></app-users-list>
