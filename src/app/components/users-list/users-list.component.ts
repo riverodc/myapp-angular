@@ -18,7 +18,15 @@ export class UsersListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.users = this.userService.getAllUsers(); 
+    /* por lo regular los datos del api demoran unos segundos 
+    en cargar hay que hacer un proceso de subscribe para saber que la data 
+    este lista o termino el proceso de carga */
+    this.userService.getAllUsers() 
+    .subscribe(data => {
+       this.users = data.results;
+        /* como resuls ya esta tipado y es un array puedo asignarlo
+         para pasarlo por el modelo de datos User[]  */
+    }); 
   }
 
 }

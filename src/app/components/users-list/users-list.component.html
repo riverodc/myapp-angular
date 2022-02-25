@@ -1,5 +1,6 @@
 <ul>
     <li *ngFor="let user of users">
-        {{ user.name }}
+        {{ user.email }}
+        <img [src]="user.picture.large" alt="">
     </li>
 </ul>
