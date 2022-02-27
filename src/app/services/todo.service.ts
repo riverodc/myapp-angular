@@ -9,6 +9,8 @@ import { Todo } from './../models/todo.model';
 })
 export class TodoService {
 
+  path = 'https://jsonplaceholder.typicode.com/todos';
+
   constructor(
     private http: HttpClient
   ) { }
@@ -16,6 +18,20 @@ export class TodoService {
   /* Metodo para optener todas las tareas */
  
   getAllTodos() {
-    return this.http.get<Todo[]>('https://jsonplaceholder.typicode.com/todos');
+    return this.http.get<Todo[]>(this.path);
   }
+
+  /* Metodo para crear todo */
+  /* basicamente vamos a crear un (todo) que se ajusta a nuestro modelo de 
+  datos (Todo) */
+
+  createTodo(todo:Todo) {
+
+    return this.http.post<Todo>(this.path, todo);
+
+  }
+
+
+
+
 }
