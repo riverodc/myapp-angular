@@ -34,9 +34,14 @@ export class TodoListComponent implements OnInit {
       completed: false,
     };
     this.todoService.createTodo(newTodo)
-    .subscribe(todo => {
-      console.log(todo);
-    });
+    .subscribe(
+      todo => {
+      this.todos.unshift(todo);
+    },
+     error => {
+       console.error(error); 
+     }
+    );
   }
 
   updateTodo() {
@@ -44,8 +49,10 @@ export class TodoListComponent implements OnInit {
   }
 
 
-  onDeleteTodo(todoId:string) {
-   console.log(todoId); 
+  onDeleteTodo(todoId:string, index: number) {
+   this.todoService.deleteTodo(todoId).subscribe(rta => {
+     this.todos.splice(index, 1); 
+   });
   }
 
 }

@@ -14,9 +14,7 @@ export class TodoService {
   constructor(
     private http: HttpClient
   ) { }
-   
   /* Metodo para optener todas las tareas */
- 
   getAllTodos() {
     return this.http.get<Todo[]>(this.path);
   }
@@ -29,6 +27,11 @@ export class TodoService {
 
     return this.http.post<Todo>(this.path, todo);
 
+  }
+
+  deleteTodo(todoId: string) {
+    const url = `${this.path}/${todoId}`;
+    return this.http.delete(url);
   }
 
 
